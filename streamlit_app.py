@@ -45,4 +45,5 @@ if time_to_insert:
     st.success(f'Well done {name_on_order}! Your Smoothie is ordered!', icon="✅")
 
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response.json())
+# st.text(smoothiefroot_response.json())
+st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
